@@ -18,6 +18,9 @@ app.use(express.static('public'));
 app.use(express.json());
 
 app.use('/api',require('./routes/router'));
+app.get("/",(req,res)=>{
+  res.json("helloooo");
+}
 
 app.listen(PORT,function (){
   console.log('Example app listening on port',PORT);
